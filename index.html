@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Kartika X2 - Mencetak Generasi Kompeten, Kreatif, dan Berkarakter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626', // Red
+                        secondary: '#1e3a8a', // Navy/Dark Blue
+                        accent: '#f59e0b', // Gold/Orange
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+        }
+        .cta-bg {
+            background: linear-gradient(rgba(220, 38, 38, 0.9), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    K2
+                </div>
+                <div>
+                    <span class="block font-bold text-lg text-secondary leading-tight">SMK KARTIKA X2</span>
+                    <span class="block text-xs text-slate-500 font-medium">Vokasi Unggul & Berkarakter</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center gap-7">
+                <a href="#beranda" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Beranda</a>
+                <a href="#profil" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Profil</a>
+                <a href="#program" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Program</a>
+                <a href="#fasilitas" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Fasilitas</a>
+                <a href="#kegiatan" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Kegiatan</a>
+                <a href="#prestasi" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Prestasi</a>
+                <a href="#berita" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Berita</a>
+                <a href="#kontak" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Kontak</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me/6281381803544" target="_blank" class="bg-primary hover:bg-red-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-user-plus"></i> Daftar Sekarang
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-secondary p-2 text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl px-6 py-4 space-y-3">
+            <a href="#beranda" class="block text-secondary font-medium py-1">Beranda</a>
+            <a href="#profil" class="block text-slate-600 font-medium py-1">Profil</a>
+            <a href="#program" class="block text-slate-600 font-medium py-1">Program Keahlian</a>
+            <a href="#fasilitas" class="block text-slate-600 font-medium py-1">Fasilitas</a>
+            <a href="#kegiatan" class="block text-slate-600 font-medium py-1">Kegiatan</a>
+            <a href="#prestasi" class="block text-slate-600 font-medium py-1">Prestasi</a>
+            <a href="#berita" class="block text-slate-600 font-medium py-1">Berita</a>
+            <a href="#kontak" class="block text-slate-600 font-medium py-1">Kontak</a>
+            <div class="pt-2">
+                <a href="https://wa.me/6281381803544" target="_blank" class="block text-center bg-primary text-white py-2.5 rounded-xl font-semibold shadow-md">Daftar Sekarang</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="beranda" class="hero-bg min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center z-10 space-y-6">
+            <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-accent shadow-lg">
+                <i class="fa-solid fa-award"></i> SMK Unggulan Terakreditasi A
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                Siap Berkarya, <span class="text-accent">Siap Menghadapi</span> Masa Depan
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
+                SMK Kartika X2 hadir untuk membentuk generasi muda yang kompeten, kreatif, berkarakter, dan siap bersaing di dunia kerja maupun melanjutkan pendidikan.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#program" class="w-full sm:w-auto bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-primary/30 transition-all hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <span>Jelajahi Sekolah</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://wa.me/6281381803544" target="_blank" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold transition-all hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-green-400 text-lg"></i> Pendaftaran Siswa Baru
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative z-20 -mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 text-center hover:translate-y-[-4px] transition-all">
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-secondary mb-1">25+</h3>
+                <p class="text-slate-500 text-sm font-medium">Tahun Pengalaman</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 text-center hover:translate-y-[-4px] transition-all">
+                <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-secondary mb-1">500+</h3>
+                <p class="text-slate-500 text-sm font-medium">Siswa Aktif</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 text-center hover:translate-y-[-4px] transition-all">
+                <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-secondary mb-1">50+</h3>
+                <p class="text-slate-500 text-sm font-medium">Guru & Tendik</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-xl border border-slate-100 text-center hover:translate-y-[-4px] transition-all">
+                <div class="w-12 h-12 bg-emerald-500/10 text-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-secondary mb-1">10+</h3>
+                <p class="text-slate-500 text-sm font-medium">Program Unggulan</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="profil" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl opacity-20 blur-xl"></div>
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-white border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1000&auto=format&fit=crop" alt="Gedung Sekolah SMK Kartika X2" class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-secondary">Kepala Sekolah</p>
+                        <p class="text-sm text-slate-600">Drs. H. Budi Santoso, M.Pd.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Tentang Sekolah</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">
+                    Membangun Kompetensi & Karakter Generasi Vokasi
+                </h2>
+                <p class="text-slate-600 leading-relaxed text-base sm:text-lg">
+                    “SMK Kartika X2 berkomitmen memberikan pendidikan vokasi yang relevan dengan perkembangan teknologi dan kebutuhan dunia industri. Melalui pembelajaran berbasis kompetensi, praktik, karakter, dan pengalaman nyata, siswa dipersiapkan menjadi lulusan yang percaya diri, produktif, dan siap menghadapi tantangan masa depan.”
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-primary text-lg"></i>
+                        <span class="font-semibold text-slate-700 text-sm">Kurikulum Industri</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-primary text-lg"></i>
+                        <span class="font-semibold text-slate-700 text-sm">Praktik 70%</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-primary text-lg"></i>
+                        <span class="font-semibold text-slate-700 text-sm">Penyaluran Kerja</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-primary text-lg"></i>
+                        <span class="font-semibold text-slate-700 text-sm">Ekstrakulikuler Aktif</span>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <a href="#kontak" class="inline-flex items-center gap-2 bg-secondary hover:bg-slate-900 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition-all">
+                        <span>Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="py-20 bg-slate-100/60 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Kompetensi Keahlian</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">Program Keahlian Unggulan</h2>
+                <p class="text-slate-600 text-base">Pilih jurusan sesuai minat dan bakat Anda untuk sukses berkarier di era modern dan industri digital.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl border border-slate-100 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-red-50 text-primary rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Desain Komunikasi Visual</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Mempelajari seni desain grafis, ilustrasi, videografi, animasi, dan periklanan digital untuk industri kreatif.</p>
+                    </div>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all">
+                        <span>Lihat Program</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl border border-slate-100 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 text-secondary rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Teknik Komputer & Jaringan</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Fokus pada perakitan komputer, manajemen jaringan LAN/WAN, administrasi server, dan keamanan cyber.</p>
+                    </div>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all">
+                        <span>Lihat Program</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl border border-slate-100 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-amber-50 text-accent rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Rekayasa Perangkat Lunak</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Mempelajari pemrograman web, mobile apps, database, dan software engineering masa kini.</p>
+                    </div>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all">
+                        <span>Lihat Program</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl border border-slate-100 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Manajemen Perkantoran</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Keahlian administrasi profesional, korespondensi modern, pengarsipan digital, dan public speaking.</p>
+                    </div>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all">
+                        <span>Lihat Program</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Program 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl border border-slate-100 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Akuntansi & Keuangan</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Penyusunan laporan keuangan manual maupun digital, perpajakan, dan aplikasi akuntansi perusahaan.</p>
+                    </div>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all">
+                        <span>Lihat Program</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Program 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl border border-slate-100 transition-all hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Bisnis & Pemasaran</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Menguasai strategi digital marketing, e-commerce, manajemen ritel, dan teknik negosiasi bisnis.</p>
+                    </div>
+                    <a href="#kontak" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all">
+                        <span>Lihat Program</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Keunggulan Sekolah</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">Belajar Bukan Sekadar di Kelas</h2>
+            <p class="text-slate-600 text-base">Kami memberikan pengalaman pembelajaran komprehensif agar siap bersaing di dunia nyata.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-5 items-start">
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shrink-0 text-xl font-bold">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-secondary text-lg mb-2">Pembelajaran Berbasis Praktik</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Porsi praktik lebih besar dengan perangkat mutakhir sesuai standar industri terkini.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-5 items-start">
+                <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center shrink-0 text-xl font-bold">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-secondary text-lg mb-2">Guru Profesional & Kompeten</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Dibimbing oleh tenaga pengajar berpengalaman dan tersertifikasi di bidangnya.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-5 items-start">
+                <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center shrink-0 text-xl font-bold">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-secondary text-lg mb-2">Fasilitas Pendukung Lengkap</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Laboratorium modern, ruang praktik representatif, dan koneksi internet cepat.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-5 items-start">
+                <div class="w-12 h-12 bg-emerald-500/10 text-emerald-600 rounded-xl flex items-center justify-center shrink-0 text-xl font-bold">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-secondary text-lg mb-2">Karakter & Soft Skill</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Pembentukan disiplin, etika kerja, kepemimpinan, dan mental tangguh.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-5 items-start">
+                <div class="w-12 h-12 bg-purple-500/10 text-purple-600 rounded-xl flex items-center justify-center shrink-0 text-xl font-bold">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-secondary text-lg mb-2">Organisasi & Ekstrakulikuler</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Wadah pengembangan minat bakat mulai dari seni, olahraga, hingga paskibra.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-5 items-start">
+                <div class="w-12 h-12 bg-rose-500/10 text-rose-600 rounded-xl flex items-center justify-center shrink-0 text-xl font-bold">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-secondary text-lg mb-2">Kerjasama Dunia Industri</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Jaringan luas dengan perusahaan mitra untuk PKL dan penempatan kerja lulusan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fasilitas" class="py-20 bg-slate-100/60 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Sarana & Prasarana</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">Fasilitas Sekolah Modern</h2>
+                <p class="text-slate-600 text-base">Didukung fasilitas terbaik untuk kenyamanan belajar dan praktik siswa setiap hari.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Facility 1 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop" alt="Laboratorium Komputer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Laboratorium</span>
+                        <h3 class="text-white text-lg font-bold">Laboratorium Komputer Modern</h3>
+                    </div>
+                </div>
+
+                <!-- Facility 2 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop" alt="Ruang Praktik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Workshop</span>
+                        <h3 class="text-white text-lg font-bold">Ruang Praktik Kejuruan</h3>
+                    </div>
+                </div>
+
+                <!-- Facility 3 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=800&auto=format&fit=crop" alt="Perpustakaan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Literasi</span>
+                        <h3 class="text-white text-lg font-bold">Perpustakaan Digital & Buku</h3>
+                    </div>
+                </div>
+
+                <!-- Facility 4 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800&auto=format&fit=crop" alt="Ruang Kelas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Akademik</span>
+                        <h3 class="text-white text-lg font-bold">Ruang Kelas Ber-AC & Multimedia</h3>
+                    </div>
+                </div>
+
+                <!-- Facility 5 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=800&auto=format&fit=crop" alt="Lapangan Olahraga" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Outdoor</span>
+                        <h3 class="text-white text-lg font-bold">Lapangan Olahraga Serbaguna</h3>
+                    </div>
+                </div>
+
+                <!-- Facility 6 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" alt="Studio Kreatif" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Kreativitas</span>
+                        <h3 class="text-white text-lg font-bold">Studio Multimedia & Kreatif Space</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kegiatan" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Aktivitas Siswa</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">Aktif, Kreatif, dan Berprestasi</h2>
+            <p class="text-slate-600 text-base">Berbagai kegiatan positif siswa dalam mengasah potensi akademik dan non-akademik.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Activity 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 group">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop" alt="Projek Siswa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span class="bg-red-50 text-primary px-3 py-1 rounded-full font-semibold">Projek Siswa</span>
+                        <span>12 Mar 2026</span>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg leading-snug">Pameran Inovasi dan Teknologi Karya Siswa Vokasi</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Siswa menampilkan hasil karya aplikasi dan prototype robotik hasil pembelajaran berbasis projek.</p>
+                </div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 group">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop" alt="Ekstrakulikuler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span class="bg-blue-50 text-secondary px-3 py-1 rounded-full font-semibold">Ekstrakulikuler</span>
+                        <span>08 Mar 2026</span>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg leading-snug">Latihan Gabungan Paskibra dan Pramuka</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Membentuk jiwa kepemimpinan, kedisiplinan, dan kekompakan antar peserta didik.</p>
+                </div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 group">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Kompetisi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span class="bg-amber-50 text-accent px-3 py-1 rounded-full font-semibold">Kompetisi</span>
+                        <span>01 Mar 2026</span>
+                    </div>
+                    <h3 class="font-bold text-secondary text-lg leading-snug">Persiapan LKS Tingkat Provinsi</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Pembinaan intensif bagi delegasi siswa yang akan berlaga di ajang Lomba Kompetensi Siswa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prestasi" class="py-20 bg-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-white/10 text-accent px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Prestasi Gemilang</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Prestasi Siswa SMK Kartika X2</h2>
+                <p class="text-slate-300 text-base">Bukti nyata dedikasi dan kualitas pembelajaran vokasi yang berprestasi di tingkat regional maupun nasional.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Achievement 1 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-accent text-secondary font-extrabold text-xs px-3 py-1 rounded-full">Juara 1</div>
+                    <div class="w-12 h-12 bg-accent/20 text-accent rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Kompetisi Desain Poster Nasional</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">Diraih oleh siswa jurusan Desain Komunikasi Visual dalam ajang kreativitas digital tingkat nasional.</p>
+                    <span class="text-xs text-accent font-semibold">Tahun 2025</span>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-accent text-secondary font-extrabold text-xs px-3 py-1 rounded-full">Juara 1</div>
+                    <div class="w-12 h-12 bg-accent/20 text-accent rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lomba IT Software Solution</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">Tim RPL SMK Kartika X2 berhasil menjadi yang terbaik dalam perancangan web aplikasi efisien.</p>
+                    <span class="text-xs text-accent font-semibold">Tahun 2025</span>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-accent text-secondary font-extrabold text-xs px-3 py-1 rounded-full">Juara 2</div>
+                    <div class="w-12 h-12 bg-accent/20 text-accent rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Kejuaraan Basket Pelajar</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">Tim bola basket putra meraih juara kedua dalam turnamen antar SMK se-Jakarta.</p>
+                    <span class="text-xs text-accent font-semibold">Tahun 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="berita" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-4">
+            <div class="space-y-2 text-center md:text-left">
+                <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Informasi Terbaru</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">Berita & Pengumuman</h2>
+            </div>
+            <a href="#kontak" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-secondary font-semibold px-5 py-2.5 rounded-xl text-sm transition-all">
+                <span>Lihat Semua Berita</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- News 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 flex flex-col justify-between group">
+                <div>
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="Berita 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between text-xs text-slate-500">
+                            <span class="bg-red-50 text-primary px-3 py-1 rounded-full font-semibold">PPDB 2026</span>
+                            <span>15 Mar 2026</span>
+                        </div>
+                        <h3 class="font-bold text-secondary text-lg leading-snug">Pembukaan Pendaftaran Peserta Didik Baru (PPDB) Gelombang 1</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">SMK Kartika X2 resmi membuka pendaftaran gelombang pertama dengan berbagai potongan biaya khusus.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="#kontak" class="text-primary font-semibold text-sm hover:underline flex items-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- News 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 flex flex-col justify-between group">
+                <div>
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop" alt="Berita 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between text-xs text-slate-500">
+                            <span class="bg-blue-50 text-secondary px-3 py-1 rounded-full font-semibold">Kerjasama</span>
+                            <span>10 Mar 2026</span>
+                        </div>
+                        <h3 class="font-bold text-secondary text-lg leading-snug">Penandatanganan MoU dengan Perusahaan Teknologi Ternama</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Memperluas kesempatan magang industri dan penyerapan lulusan siap kerja langsung di dunia usaha.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="#kontak" class="text-primary font-semibold text-sm hover:underline flex items-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- News 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 flex flex-col justify-between group">
+                <div>
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop" alt="Berita 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between text-xs text-slate-500">
+                            <span class="bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full font-semibold">Workshop</span>
+                            <span>05 Mar 2026</span>
+                        </div>
+                        <h3 class="font-bold text-secondary text-lg leading-snug">Seminar Kewirausahaan Digital untuk Siswa Tingkat Akhir</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Membekali siswa dengan mental wirausaha dan strategi membangun startup mandiri setelah lulus.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="#kontak" class="text-primary font-semibold text-sm hover:underline flex items-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-100/60 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Testimoni Alumni</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">Kata Mereka yang Telah Berhasil</h2>
+                <p class="text-slate-600 text-base">Cerita inspiratif dari para alumni yang telah sukses meniti karier di dunia industri.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-accent flex gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 italic text-base leading-relaxed mb-6">
+                            “SMK Kartika X2 memberikan saya pengalaman praktik dan kepercayaan diri yang sangat membantu ketika masuk ke dunia kerja. Fasilitas lab komputer dan bimbingan gurunya sangat luar biasa!”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-slate-100 pt-4">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-lg">
+                            RD
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-secondary">Rian Dimas Pratama</h4>
+                            <p class="text-xs text-slate-500">Alumni RPL 2024 • Software Engineer di Tech Corp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-accent flex gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 italic text-base leading-relaxed mb-6">
+                            “Berkat bimbingan intensif dan kedisiplinan di SMK Kartika X2, saya langsung diterima bekerja di agensi kreatif ternama bahkan sebelum wisuda kelulusan.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-slate-100 pt-4">
+                        <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-full flex items-center justify-center font-bold text-lg">
+                            SA
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-secondary">Siti Aisyah</h4>
+                            <p class="text-xs text-slate-500">Alumni DKV 2023 • Graphic Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 cta-bg text-center text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <span class="bg-white/20 text-accent px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md">Pendaftaran Dibuka</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                Saatnya Menjadi Bagian dari <span class="text-accent">SMK Kartika X2</span>
+            </h2>
+            <p class="text-slate-200 text-lg max-w-2xl mx-auto leading-relaxed">
+                Bangun keterampilan, kembangkan potensi, dan persiapkan masa depanmu bersama kami menuju kesuksesan gemilang.
+            </p>
+            <div class="pt-4">
+                <a href="https://wa.me/6281381803544" target="_blank" class="inline-flex items-center gap-3 bg-accent hover:bg-amber-600 text-secondary font-bold px-8 py-4 rounded-xl shadow-xl transition-all hover:-translate-y-1 text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Daftar Sekarang Via WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Hubungi Kami</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">Informasi & Kontak Sekolah</h2>
+            <p class="text-slate-600 text-base">Silakan hubungi kami atau kunjungi lokasi sekolah untuk informasi pendaftaran dan konsultasi langsung.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Info & Form -->
+            <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 space-y-6">
+                <h3 class="text-xl font-bold text-secondary">Kirim Pesan Kepada Kami</h3>
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Nama Lengkap</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary text-sm" placeholder="Masukkan nama Anda">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary text-sm" placeholder="nama@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Nomor WhatsApp</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary text-sm" placeholder="08xxxxxxxxxx">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Pesan</label>
+                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary text-sm" placeholder="Tuliskan pertanyaan atau pesan Anda di sini..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white font-semibold py-3.5 rounded-xl shadow-md transition-all">Kirim Pesan</button>
+                </form>
+                <div id="form-success" class="hidden bg-emerald-50 text-emerald-700 p-4 rounded-xl text-sm font-medium border border-emerald-200 text-center">
+                    Terima kasih! Pesan Anda berhasil dikirim. Tim kami akan segera merespons.
+                </div>
+            </div>
+
+            <!-- Map & Details -->
+            <div class="space-y-6">
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 space-y-4">
+                    <h3 class="text-xl font-bold text-secondary">Alamat & Jam Layanan</h3>
+                    <div class="space-y-3 text-sm text-slate-600">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-primary text-lg mt-0.5"></i>
+                            <p>Jl. Anggrek No.1, RT.1/RW.7, Pesanggrahan, Kec. Pesanggrahan, Jakarta 12320</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-primary text-lg"></i>
+                            <p>+62 813-8180-3544 (WhatsApp)</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary text-lg"></i>
+                            <p>info@smkkartikax2.sch.id</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-primary text-lg"></i>
+                            <p>Senin - Jumat: 07.00 - 16.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-100 h-64">
+                    <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.198305609462!2d106.7500!3d-6.2500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTUnMDAuMCJTIDEwNMKwNDUnMDAuMCJF!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-md">
+                        K2
+                    </div>
+                    <span class="font-bold text-lg tracking-tight">SMK KARTIKA X2</span>
+                </div>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Mencetak generasi kompeten, kreatif, dan berkarakter yang siap menghadapi tantangan dunia industri dan masa depan.
+                </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/6281381803544" target="_blank" class="w-9 h-9 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-bold text-base text-accent">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li><a href="#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+                    <li><a href="#profil" class="hover:text-white transition-colors">Profil Sekolah</a></li>
+                    <li><a href="#program" class="hover:text-white transition-colors">Program Keahlian</a></li>
+                    <li><a href="#fasilitas" class="hover:text-white transition-colors">Fasilitas</a></li>
+                    <li><a href="#berita" class="hover:text-white transition-colors">Berita Terbaru</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-bold text-base text-accent">Program Keahlian</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li><a href="#program" class="hover:text-white transition-colors">Desain Komunikasi Visual</a></li>
+                    <li><a href="#program" class="hover:text-white transition-colors">Teknik Komputer & Jaringan</a></li>
+                    <li><a href="#program" class="hover:text-white transition-colors">Rekayasa Perangkat Lunak</a></li>
+                    <li><a href="#program" class="hover:text-white transition-colors">Manajemen Perkantoran</a></li>
+                    <li><a href="#program" class="hover:text-white transition-colors">Akuntansi & Keuangan</a></li>
+                    <li><a href="#program" class="hover:text-white transition-colors">Bisnis & Pemasaran</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-bold text-base text-accent">Kontak Resmi</h4>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li>Jl. Anggrek No.1, Pesanggrahan, Jakarta 12320</li>
+                    <li>WhatsApp: +62 813-8180-3544</li>
+                    <li>Email: info@smkkartikax2.sch.id</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 text-center text-sm text-slate-400">
+            <p>© 2026 SMK Kartika X2. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submit handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            const successMsg = document.getElementById('form-success');
+            
+            form.style.display = 'none';
+            successMsg.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
